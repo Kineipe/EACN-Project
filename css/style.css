@@ -1,0 +1,235 @@
+/* CSS by Pedro Kineipe */
+
+/* Settings */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 99vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 14% auto 50%;
+    grid-template-columns: auto;
+    grid-template-areas: "top-bar"
+                         "content"
+                         "footer";
+}
+
+/* Navbar */
+
+#top-bar{
+    grid-area: top-bar;
+    height: 12vh;
+    width: 100%;
+    padding: 0 5% 0 5%;
+    background-color: #202a4b;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#logotype{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#logo{
+    width: 20%;
+    height: auto;
+
+}
+nav{
+    width: 30%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+#nav-ul{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 10%;
+}
+.list-item{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    list-style-type: none;
+}
+.nav-item{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-family: verdana;
+    font-size: 1.2rem;
+    color: #bcbcbc;
+    display: grid;
+    place-items: center;
+    transition: all 0.1s ease-in-out;
+}
+.nav-item:hover{
+    color: #fff;
+    border-bottom: 6px solid #fff;
+}
+
+/* Content */
+
+main{
+    grid-area: content;
+    padding: 2.5% 20% 0 20%;
+    font-family: verdana;
+    font-size: 1.2rem;
+    color: #333;
+}
+#title{
+    display: grid;
+    place-items: center;
+}
+h1, h2{
+    margin-bottom: 2%;
+}
+p{
+    margin-top: 3%;
+    margin-bottom: 5%;
+    text-align: justify;
+}
+.bold{
+    font-weight: 850;
+}
+#types-title{
+    margin: 4% 0 7% 0;
+}
+.types{
+    padding: 0 21% 0 21%;
+}
+
+/* Graphics */
+
+.results{
+    margin: 0 0 4.5% 0;
+    display: grid;
+    grid-template-rows: 20% auto;
+    grid-template-columns: 60% auto;
+    grid-template-areas: "question question"
+                         "graphic analysys";
+}
+hr{
+    width: 100%;
+    background-color: #555;
+    margin: 10% 0 10% 0;
+}
+.question{
+    grid-area: question;
+    margin: 0 0 4.5% 0;
+}
+.figure{
+    grid-area: graphic;
+}
+.graphics{
+    width: 75%;
+    height: auto;
+}
+.analysys{
+    grid-area: analysys;
+}
+ /* Page-End */ 
+
+#conclusion{
+    margin: 0 0 5% 0;
+}
+#references{
+    margin: 0 0 15% 0;
+    font-size: 1.2rem;
+    color: #898989;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+/* Footer */
+
+footer{
+    grid-area: footer;
+    width: 100%;
+    border-top: 12px solid #0d1329;
+    border-radius: 10px 10px 0 0;
+    font-family: verdana;
+    font-size: 1.05rem;
+    display: grid;
+    grid-template-rows: 22.5% auto;
+    grid-template-columns: auto;
+    grid-template-areas: "cps"
+                         "information"
+                         "rights";
+    color: #fff;
+    background-color: #202a4b;
+}
+#cps{
+    grid-area: cps;
+    padding: 0 1% 0 .5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#cps-logo{
+    width: 30%;
+    height: auto;
+}
+#cps-anchor, #cps-anchor:visited{
+    text-decoration: none;
+    color: #00a8ff;
+}
+#cps-anchor:hover{
+    text-decoration: underline #00a8ff;
+}
+#cps-anchor:active{
+    color: #fff;
+    text-decoration: underline #fff;
+}
+#information{
+    grid-area: information;
+    padding: 2.5% 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.inform-title{
+    margin: 0 0 3% 0;
+}
+.foot-item{
+    width: 20%;
+    height: auto;
+}
+#foot-hr{
+    width: 80%;
+    margin: 2% 0 0 0;
+    background-color: #fff;
+}
+#rights{
+    grid-area: rights;
+    background-color: #202a4b;
+    display: grid;
+    place-items: end center;
+} 
+/* Responsivity */
+
+@media only screen and (max-device-width: 500px) {
+    main { padding: 0 4% 0 4%; }
+    h1 { font-size: 2.2rem;}
+    }
+    
